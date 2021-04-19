@@ -10,18 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Planner">
         <activity android:name=".Login.LoginActivity" /> <!-- Nu stiu daca e corect pusa aici. Poate mai jos?-->
-        <activity android:name=".SplashActivity" /> <!-- Nu stiu daca e corect pusa aici. Poate mai jos?-->
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
 
         <activity
             android:name=".MainActivity"
             android:label="Excitivity"
             android:theme="@style/Theme.Planner.NoActionBar">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
