@@ -43,7 +43,8 @@ public class LoginActivity extends AppCompatActivity {
                     editor.commit();
                     SharedPreferences data = getSharedPreferences("user_data",MODE_PRIVATE);
                     SharedPreferences.Editor datasaver = data.edit();
-                    datasaver.putString("pass/user",inpass + "/" +inuser);
+                    datasaver.putString("user",inuser);
+                    datasaver.putString("pass",inpass);
                     datasaver.commit();
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     //intent.putExtra("User", usernameEditText.getText().toString()+"");
@@ -55,7 +56,6 @@ public class LoginActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed(){}//don't go back if the back button is pressed
-    public void SaveData(){}
 }
 //SharedPreferences.Editor editor = pref.edit();
 // editor.putBoolean("firststart", false);
