@@ -9,5 +9,9 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="Explaination">Welcome to Excitivity! Since you\'re new, let\'s make an account first:</string>
+    <string name="Explaination">\t Welcome to Excitivity! Since you\'re new, let\'s make an account first:</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="confirm_password">confirm password</string>
 </resources>

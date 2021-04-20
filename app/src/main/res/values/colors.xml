@@ -9,5 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="indian_khaki">#C2AD98</color>
     <color name="bone">#DECDBB</color>
-
+    <color name="olive">#c3ffb0</color>
+    <color name="dark_green">#259900</color>
+    <color name="grey">#666262</color>
 </resources>
