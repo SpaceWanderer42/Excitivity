@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
             if(incopass.equals(inpass))
             {
 
-                if(checkPasswordConstraints(password) && (inpass.equals("")==false) && (inuser.equals("")==false)){
+                if(checkPasswordConstraints(inpass) && (inpass.equals("")==false) && (inuser.equals("")==false)){
                     SharedPreferences pref = getSharedPreferences("preference", MODE_PRIVATE);
                     SharedPreferences.Editor editor = pref.edit();
                     editor.putBoolean("firststart", false);
@@ -48,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     //intent.putExtra("User", usernameEditText.getText().toString()+"");
                     startActivity(intent);
+                    finish();
                 }
             }
         });
