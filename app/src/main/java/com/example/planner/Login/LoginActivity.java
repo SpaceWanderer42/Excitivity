@@ -1,11 +1,13 @@
 package com.example.planner.Login;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.planner.MainActivity;
 import com.example.planner.R;
 
 import android.os.Bundle;
@@ -43,7 +45,9 @@ public class LoginActivity extends AppCompatActivity {
                     SharedPreferences.Editor datasaver = data.edit();
                     datasaver.putString("pass/user",inpass + "/" +inuser);
                     datasaver.commit();
-                    finish();
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    //intent.putExtra("User", usernameEditText.getText().toString()+"");
+                    startActivity(intent);
                 }
             }
         });
