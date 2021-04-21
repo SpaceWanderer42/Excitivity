@@ -1,5 +1,6 @@
 package com.example.planner;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -16,6 +17,8 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final int NEW_PROG_ACTIVITY_REQUEST_CODE = 1; // pentru a alege (un nou) program din lista
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        //.setAction("Action", null).show();
+                Intent intent = new Intent(MainActivity.this, ProgramsActivity.class);
+                startActivityForResult(intent, NEW_PROG_ACTIVITY_REQUEST_CODE);
             }
         });
     }

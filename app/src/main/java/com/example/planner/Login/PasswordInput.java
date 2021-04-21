@@ -25,7 +25,7 @@ public class PasswordInput extends AppCompatActivity {
         SharedPreferences datasaver = getSharedPreferences("user_data", MODE_PRIVATE);
         String username = datasaver.getString("user","");
         String password = datasaver.getString("pass","");
-        welcomer.setText("  Welcome " + username);
+        welcomer.setText("  Welcome, " + username);
         buton.setOnClickListener(v ->{
             String aux;
             aux= inpass.getText().toString();
