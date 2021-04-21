@@ -12,10 +12,30 @@ import com.example.planner.R;
 
 import android.os.Bundle;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class LoginActivity extends AppCompatActivity {
     String password,username;
     public boolean checkPasswordConstraints(String proposedPass){
-        return true;
+        boolean isokay = true;
+        Pattern pattern = Pattern.compile(".*\\s.*");
+        Matcher matcher = pattern.matcher(proposedPass);
+        boolean foundspace = matcher.find();
+        if(foundspace == true){
+            isokay = false;
+            //error message, password contains empty spaces.
+        }
+        if(proposedPass.length()<= 6){//at least 6 characters for
+            isokay = false;
+        }
+        Pattern pattern2 = Pattern.compile(".*[0-9]+.*");//regex matching any character that appear 0 or more time then a digit that appear at least once then any character zero or more times
+        Matcher matcher2 = pattern2.matcher(proposedPass);//must contain at least one digit
+        boolean founddigit = matcher2.find();
+        if(founddigit == false){
+            isokay = false;
+        }
+        return isokay;
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
