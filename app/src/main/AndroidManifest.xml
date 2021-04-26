@@ -15,8 +15,10 @@
             android:label="Excitivity"
             android:theme="@style/Theme.Planner.NoActionBar" />
         <activity android:name=".Login.LoginActivity" />
-        <activity android:name=".ProgramsActivity"></activity>
+        <activity android:name=".ProgramsActivity">
+        </activity>
         <activity android:name=".SplashActivity">
+            <!--android:theme="@style/SplashScreenTheme">-->
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

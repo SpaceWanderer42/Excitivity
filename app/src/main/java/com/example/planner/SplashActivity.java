@@ -20,18 +20,15 @@ public class SplashActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splashscreen);
+        getSupportActionBar().setElevation(0);//remove shadow under toolbar manually
         handler = new Handler();
         handler.postDelayed(new Runnable() {
 
             @Override
             public void run() {
                 SharedPreferences pref;
-                pref = getSharedPreferences("login_data", MODE_PRIVATE);
-
+                pref = getSharedPreferences("preference", MODE_PRIVATE);
                 if(pref.getBoolean("firststart", true)){
-                    SharedPreferences.Editor editor = pref.edit();
-                    editor.putBoolean("firststart", false);
-                    editor.commit(); // apply changes
                     Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();

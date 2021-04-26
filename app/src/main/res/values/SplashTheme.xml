@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SplashScreenTheme" parent = "@style/Theme.AppCompat">
+        <item name="colorPrimary">@color/ic_launcher_background</item>
+        <item name="colorPrimaryVariant">@color/ic_launcher_background</item>
+        <item name="colorOnPrimary">@color/ic_launcher_background</item>
+        <item name="colorSecondary">@color/ic_launcher_background</item>
+        <item name="colorSecondaryVariant">@color/ic_launcher_background</item>
+        <item name="colorOnSecondary">@color/ic_launcher_background</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/ic_launcher_background</item>
+        <item name = "android:colorPrimaryDark">@color/ic_launcher_background</item>
+        <item name = "android:navigationBarColor">@color/ic_launcher_background</item>
+
+    </style>
+</resources>
