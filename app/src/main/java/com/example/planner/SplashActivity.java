@@ -22,25 +22,20 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.splashscreen);
         getSupportActionBar().setElevation(0);//remove shadow under toolbar manually
         handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        handler.postDelayed(() -> {
+            SharedPreferences pref;
+            pref = getSharedPreferences("preference", MODE_PRIVATE);
+            if(pref.getBoolean("firststart", true)){
+                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
 
-            @Override
-            public void run() {
-                SharedPreferences pref;
-                pref = getSharedPreferences("preference", MODE_PRIVATE);
-                if(pref.getBoolean("firststart", true)){
-                    Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
-                    startActivity(intent);
-                    finish();
-
-                }
-                else{
-                    Intent launchlogin = new Intent(SplashActivity.this, PasswordInput.class);
-                    startActivity(launchlogin);
-                    finish();
-                }
             }
-
+            else{
+                Intent launchlogin = new Intent(SplashActivity.this, PasswordInput.class);
+                startActivity(launchlogin);
+                finish();
+            }
         }, 3000);
 
 

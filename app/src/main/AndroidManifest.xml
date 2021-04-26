@@ -3,7 +3,7 @@
     package="com.example.planner">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="Excitivity"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -17,8 +17,8 @@
         <activity android:name=".Login.LoginActivity" />
         <activity android:name=".ProgramsActivity">
         </activity>
-        <activity android:name=".SplashActivity">
-            <!--android:theme="@style/SplashScreenTheme">-->
+        <activity android:name=".SplashActivity"
+            android:theme="@style/SplashScreenTheme">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
