@@ -17,7 +17,7 @@ public class PasswordInput extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_password_input);
+        setContentView(R.layout.activity_login);
         TextView welcomer = findViewById(R.id.welcomer);
         Button buton;
         buton= findViewById(R.id.login_buton);
