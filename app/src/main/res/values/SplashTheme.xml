@@ -13,6 +13,6 @@
         <item name="android:textColorPrimary">@color/ic_launcher_background</item>
         <item name = "android:colorPrimaryDark">@color/ic_launcher_background</item>
         <item name = "android:navigationBarColor">@color/ic_launcher_background</item>
-
+        <item name = "android:windowBackground">@color/ic_launcher_background</item>
     </style>
 </resources>
