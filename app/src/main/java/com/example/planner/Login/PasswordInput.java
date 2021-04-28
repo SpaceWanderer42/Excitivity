@@ -37,9 +37,9 @@ public class PasswordInput extends AppCompatActivity {
             }
             else {
                 if (!aux.equals("")){
-                    error.setText("password is incorrect!");
+                    error.setText("Password is incorrect!");
                 Handler handler = new Handler();
-                handler.postDelayed(() -> error.setText(""), 1200);
+                handler.postDelayed(() -> error.setText(""), 5000);
              }
             }
         });
