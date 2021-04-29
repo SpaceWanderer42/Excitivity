@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.Planner" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/indian_khaki</item>
-        <item name="colorPrimaryVariant">@color/bone</item>
+        <item name="colorPrimary">@color/sort_of_blue</item> <!-- era indian_khaki-->
+        <item name="colorPrimaryVariant">@color/teal_700</item>  <!-- era bone-->
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
