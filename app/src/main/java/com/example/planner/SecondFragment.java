@@ -1,6 +1,7 @@
 package com.example.planner;
 
 import android.os.Bundle;
+import android.transition.TransitionInflater;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,16 @@ import androidx.navigation.fragment.NavHostFragment;
 public class SecondFragment extends Fragment {
     CalendarView calendarr;
     TextView date_view;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState){ //View in loc de void, dar apare clash
+
+        super.onCreate(savedInstanceState);
+        TransitionInflater inflater = TransitionInflater.from(requireContext());
+        setExitTransition(inflater.inflateTransition((R.transition.slide_right)));
+
+    }
+
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
