@@ -17,6 +17,9 @@ public class FirstFragment extends Fragment {
 
         super.onCreate(savedInstanceState);
         TransitionInflater inflater = TransitionInflater.from(requireContext());
+
+        setEnterTransition(inflater.inflateTransition(R.transition.slide_right));
+
         setExitTransition(inflater.inflateTransition((R.transition.slide_left)));
 
     }
