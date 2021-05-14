@@ -14,6 +14,10 @@
             android:name=".MainActivity"
             android:label="Excitivity"
             android:theme="@style/Theme.Planner.NoActionBar" />
+        <activity android:name=".Cooking"></activity>
+        <activity android:name=".Sport"></activity>
+        <activity android:name=".Study"></activity>
+        <activity android:name=".Photography"></activity>
         <activity android:name=".Login.LoginActivity" />
         <activity android:name=".ProgramsActivity">
         </activity>
