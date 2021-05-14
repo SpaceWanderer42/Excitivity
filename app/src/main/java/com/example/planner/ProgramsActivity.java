@@ -3,86 +3,46 @@ package com.example.planner;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
 
-public class ProgramsActivity extends AppCompatActivity {
+public class ProgramsActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button button1, button2, button3, button4;
+    public CardView cooking;
+
+    @Override
+    public void onClick(View v) {
+        Intent intent;
+        switch (v.getId()) {
+            case R.id.Cooking:
+            default:
+                intent = new Intent(this, cooking.class);
+                startActivity(intent);
+                break;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_programs);
-
+        TextView welcome = findViewById(R.id.Welcome);
+        SharedPreferences datasaver = getSharedPreferences("user_data", MODE_PRIVATE);
+        String username = datasaver.getString("user","");
+        welcome.setText("Welcome back, " + username + "!");
+        cooking = (CardView) findViewById(R.id.Cooking);
+        cooking.setOnClickListener(this);
         //getActionBar().setDisplayHomeAsUpEnabled(true);
 
-        button1 = (Button) findViewById(R.id.button);
-        button2 = (Button) findViewById(R.id.button3);
-        button3 = (Button) findViewById(R.id.button4);
-        button4 = (Button) findViewById(R.id.button5);
-
-        button1.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v){
-
-                openCooking();
-            }
-        });
-        button2.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v){
-                openSport();
-            }
-
-        });
-        button3.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v){
-
-                openStudy();
-            }
-        });
-        button4.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v){
-
-                openPhotography();
-            }
-        });
 
     }
-    public void openCooking(){
-
-        Intent intent = new Intent (this, Cooking.class);
-        startActivity(intent);
-    }
-    public void openSport(){
-
-        Intent intent = new Intent (this, Sport.class);
-        startActivity(intent);
-    }
-    public void openStudy(){
-
-        Intent intent = new Intent (this, Study.class);
-        startActivity(intent);
-    }
-    public void openPhotography(){
-
-        Intent intent = new Intent (this, Photography.class);
-        startActivity(intent);
-    }
-
-
 /*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
