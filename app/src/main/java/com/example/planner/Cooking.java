@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -32,6 +33,13 @@ public class Cooking extends AppCompatActivity implements View.OnClickListener {
         cooking1.setOnClickListener(this);
         cooking2 = (CardView) findViewById(R.id.Cooking2);
         cooking2.setOnClickListener(this);
+        SharedPreferences datasaver = getSharedPreferences("tasks", MODE_PRIVATE);
+        if(datasaver.getString("cooking1","").equals("1")) {
+            cooking1.setCardBackgroundColor(0xff328ca8);
+        }
+        if(datasaver.getString("cooking2","").equals("1")) {
+            cooking2.setCardBackgroundColor(0xff328ca8);
+        }
 
     }
 
@@ -43,9 +51,22 @@ public class Cooking extends AppCompatActivity implements View.OnClickListener {
                 intent.putExtra("activity", "cooking1");
                 break;
             case R.id.Cooking2:
-            default:
                 intent.putExtra("activity", "cooking2");
-
+                break;
+            case R.id.Cooking3:
+                intent.putExtra("activity", "cooking3");
+                break;
+            case R.id.Cooking4:
+                intent.putExtra("activity", "cooking4");
+                break;
+            case R.id.Cooking5:
+                intent.putExtra("activity", "cooking5");
+                break;
+            case R.id.Cooking6:
+                intent.putExtra("activity", "cooking6");
+                break;
+            case R.id.Cooking7:
+                intent.putExtra("activity", "cooking7");
                 break;
         }
         startActivity(intent);
