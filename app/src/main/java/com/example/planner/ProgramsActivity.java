@@ -13,7 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-public class ProgramsActivity extends AppCompatActivity implements View.OnClickListener{
+public class ProgramsActivity extends AppCompatActivity implements View.OnClickListener {
 
     public CardView cooking;
 
@@ -23,7 +23,7 @@ public class ProgramsActivity extends AppCompatActivity implements View.OnClickL
         switch (v.getId()) {
             case R.id.Cooking:
             default:
-                intent = new Intent(this, cooking.class);
+                intent = new Intent(this, Cooking.class);
                 startActivity(intent);
                 break;
         }
