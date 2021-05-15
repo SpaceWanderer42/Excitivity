@@ -21,25 +21,25 @@ public class Display_Task extends AppCompatActivity {
         String activity = curr_intent.getStringExtra("activity");
         switch (activity) {
             case "cooking1":
-                text.setText("Try a new recipe!");
+                text.setText("Try a new recipe");
                 break;
             case "cooking2":
                 text.setText("Prepare a meal inspired by a TV show or movie");
                 break;
             case "cooking3":
-                text.setText("Make a homemade bread!");
+                text.setText("Cook from a Pinterest recipe");
                 break;
             case "cooking4":
-                text.setText("Make a homemade bread!");
+                text.setText("Create your own smoothie");
                 break;
             case "cooking5":
-                text.setText("Make a homemade bread!");
+                text.setText("Bake a cake/your favorite treat");
                 break;
             case "cooking6":
-                text.setText("Make a homemade bread!");
+                text.setText("Cook a recipe from another country");
                 break;
             case "cooking7":
-                text.setText("Make a homemade bread!");
+                text.setText("Try to recreate your favorite drink");
                 break;
         }
         done.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +51,9 @@ public class Display_Task extends AppCompatActivity {
                     datasaver.putString(activity, String.valueOf(1));
                     datasaver.commit();
                     Intent intent = new Intent(Display_Task.this, Cooking.class);
+                    intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);;
                     startActivity(intent);
+                    finish();
                 }
             }
         });

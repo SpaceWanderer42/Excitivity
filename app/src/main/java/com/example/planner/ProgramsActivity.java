@@ -37,14 +37,14 @@ public class ProgramsActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_programs);
+
         TextView welcome = findViewById(R.id.Welcome);
         SharedPreferences datasaver = getSharedPreferences("user_data", MODE_PRIVATE);
         String username = datasaver.getString("user", "");
         welcome.setText("Welcome back, " + username + "!");
+
         cooking = (CardView) findViewById(R.id.Cooking);
         cooking.setOnClickListener(this);
-        //getActionBar().setDisplayHomeAsUpEnabled(true);
-
 
     }
 

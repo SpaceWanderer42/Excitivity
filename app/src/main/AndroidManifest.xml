@@ -9,15 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Planner">
-        <activity android:name=".Display_Task"></activity>
-        <activity android:name=".Cooking" />
+        <activity
+            android:name=".Display_Task"
+            android:noHistory="true"/>
+        <activity android:name=".Cooking" >
+        </activity>
         <activity android:name=".Login.LogInActivity" />
         <activity
             android:name=".MainActivity"
             android:label="Excitivity"
             android:theme="@style/Theme.Planner.NoActionBar" />
         <activity android:name=".Login.SignUpActivity" />
-        <activity android:name=".ProgramsActivity" />
+        <activity android:name=".ProgramsActivity"/>
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashScreenTheme">

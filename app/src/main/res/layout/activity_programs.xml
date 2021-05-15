@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey"
+    android:background="#8fbdbc"
     tools:context=".ProgramsActivity">
 
     <LinearLayout
@@ -17,14 +17,16 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10sp"
             android:layout_marginTop="10sp"
-            android:layout_marginRight="10sp">
+            android:layout_marginRight="10sp"
+            app:cardCornerRadius="20sp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white"
+                android:background="#1dae8f"
                 android:orientation="vertical"
                 android:weightSum="1">
+
 
                 <TextView
                     android:id="@+id/Welcome"
@@ -34,7 +36,9 @@
                     android:paddingStart="20dp"
                     android:paddingTop="10dp"
                     android:paddingEnd="90dp"
-                    android:textColor="@color/black"
+                    android:textColor="#cc156b"
+                    android:fontFamily="@font/lora"
+                    android:textStyle="bold"
                     android:textSize="25sp" />
 
                 <ImageView
@@ -67,7 +71,7 @@
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
                 android:layout_margin="10sp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="#FFFF99"
                 app:cardCornerRadius="20sp">
 
                 <RelativeLayout
@@ -97,7 +101,9 @@
                         android:text="Cooking"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="20sp"></TextView>
+                        android:textSize="20sp">
+
+                    </TextView>
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -106,7 +112,7 @@
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
                 android:layout_margin="10sp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="#FFFF99"
                 app:cardCornerRadius="20sp">
 
                 <TextView
@@ -128,7 +134,7 @@
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
                 android:layout_margin="10sp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="#FFFF99"
                 app:cardCornerRadius="20sp">
 
                 <TextView
@@ -150,7 +156,7 @@
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
                 android:layout_margin="10sp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="#FFFF99"
                 app:cardCornerRadius="20sp">
 
                 <TextView

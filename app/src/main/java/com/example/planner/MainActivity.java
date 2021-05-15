@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, ProgramsActivity.class);
                 startActivityForResult(intent, NEW_PROG_ACTIVITY_REQUEST_CODE);
             }
-        });
+         });
 
     }
 

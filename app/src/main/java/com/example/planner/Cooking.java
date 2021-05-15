@@ -1,12 +1,16 @@
 package com.example.planner;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
+
+import java.util.Objects;
 
 public class Cooking extends AppCompatActivity implements View.OnClickListener {
     public CardView cooking1;
@@ -26,6 +30,14 @@ public class Cooking extends AppCompatActivity implements View.OnClickListener {
 
 
     @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Intent intent = new Intent(Cooking.this, ProgramsActivity.class);
+        startActivity(intent);
+        finish();
+        return true;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cooking);
@@ -40,6 +52,10 @@ public class Cooking extends AppCompatActivity implements View.OnClickListener {
         if(datasaver.getString("cooking2","").equals("1")) {
             cooking2.setCardBackgroundColor(0xff328ca8);
         }
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        /*<meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value="MainActivity" />*/
 
     }
 
@@ -70,5 +86,6 @@ public class Cooking extends AppCompatActivity implements View.OnClickListener {
                 break;
         }
         startActivity(intent);
+        finish();
     }
 }
