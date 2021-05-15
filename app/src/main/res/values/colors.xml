@@ -5,13 +5,14 @@
     <color name="purple_700">#DECDBB</color> <!-- Nu mai e aceeasi culoare (purple)-->
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+    <color name="blue_writing">#FF313b84</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="indian_khaki">#C2AD98</color>
     <color name="bone">#DECDBB</color>
     <color name="olive">#c3ffb0</color>
     <color name="dark_green">#259900</color>
-    <color name="grey">#666262</color>
+    <color name="grey">#FF666262</color>
     <color name="red">#FF0000</color>
     <color name="sort_of_blue">#29968F</color>
 </resources>

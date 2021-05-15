@@ -11,7 +11,9 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <!-- Font Style -->
+        <item name="android:textViewStyle">@style/LoraTextViewStyle</item>
+        <item name="android:buttonStyle">@style/LoraButtonStyle</item>
     </style>
 
     <style name="Theme.Planner.NoActionBar">
@@ -22,4 +24,13 @@
     <style name="Theme.Planner.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Planner.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="LoraTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/lora</item>
+    </style>
+
+    <style name="LoraButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">@font/lora</item>
+    </style>
+
 </resources>
