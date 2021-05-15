@@ -49,7 +49,7 @@ public class ProgramsActivity extends AppCompatActivity implements View.OnClickL
     }
 
     public void openCalendar(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, CalendarActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
