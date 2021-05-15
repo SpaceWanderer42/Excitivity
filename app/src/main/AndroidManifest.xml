@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Planner">
+        <activity android:name=".CalendarActivity"></activity>
         <activity android:name=".Display_Task"></activity>
         <activity android:name=".Cooking" />
         <activity android:name=".Login.LogInActivity" />
