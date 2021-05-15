@@ -51,25 +51,25 @@ public class Cooking extends AppCompatActivity implements View.OnClickListener {
         card7.setOnClickListener(this);
         SharedPreferences datasaver = getSharedPreferences("tasks", MODE_PRIVATE);
         if(datasaver.getString("cooking1","").equals("1")) {
-            card1.setCardBackgroundColor(0xff328ca8);
+            card1.setCardBackgroundColor(0xFF77dd77);
         }
         if(datasaver.getString("cooking2","").equals("1")) {
-            card2.setCardBackgroundColor(0xff328ca8);
+            card2.setCardBackgroundColor(0xFF77dd77);
         }
         if(datasaver.getString("cooking3","").equals("1")) {
-            card3.setCardBackgroundColor(0xff328ca8);
+            card3.setCardBackgroundColor(0xFF77dd77);
         }
         if(datasaver.getString("cooking4","").equals("1")) {
-            card4.setCardBackgroundColor(0xff328ca8);
+            card4.setCardBackgroundColor(0xFF77dd77);
         }
         if(datasaver.getString("cooking5","").equals("1")) {
-            card5.setCardBackgroundColor(0xff328ca8);
+            card5.setCardBackgroundColor(0xFF77dd77);
         }
         if(datasaver.getString("cooking6","").equals("1")) {
-            card6.setCardBackgroundColor(0xff328ca8);
+            card6.setCardBackgroundColor(0xFF77dd77);
         }
         if(datasaver.getString("cooking7","").equals("1")) {
-            card7.setCardBackgroundColor(0xff328ca8);
+            card7.setCardBackgroundColor(0xFF77dd77);
         }
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 

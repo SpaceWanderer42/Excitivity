@@ -14,5 +14,9 @@
     <color name="dark_green">#259900</color>
     <color name="grey">#FF666262</color>
     <color name="red">#FF0000</color>
+    <color name="blue_background">#FF8fbdbc</color>
+    <color name="green_complete">#FF77dd77</color>
+    <color name="purple_incomplete">#FF883683</color>
+    <color name="white_na">#FFc7bfbf</color>
     <color name="sort_of_blue">#29968F</color>
 </resources>

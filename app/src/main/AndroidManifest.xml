@@ -15,7 +15,6 @@
         <activity android:name=".Cooking" >
         </activity>
         <activity android:name=".CalendarActivity"></activity>
-        <activity android:name=".Cooking" />
         <activity android:name=".Login.LogInActivity" />
         <activity
             android:name=".MainActivity"

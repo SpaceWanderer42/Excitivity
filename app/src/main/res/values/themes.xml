@@ -14,6 +14,8 @@
         <!-- Font Style -->
         <item name="android:textViewStyle">@style/LoraTextViewStyle</item>
         <item name="android:buttonStyle">@style/LoraButtonStyle</item>
+        <!-- Background -->
+<!--        <item name="android:background">@color/blue_background</item>-->
     </style>
 
     <style name="Theme.Planner.NoActionBar">
