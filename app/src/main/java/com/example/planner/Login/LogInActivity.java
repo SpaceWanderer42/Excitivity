@@ -3,16 +3,17 @@ package com.example.planner.Login;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.os.Handler;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.planner.MainActivity;
+import com.example.planner.ProgramsActivity;
 import com.example.planner.R;
 
-public class PasswordInput extends AppCompatActivity {
+public class LogInActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,7 @@ public class PasswordInput extends AppCompatActivity {
             String aux;
             aux= inpass.getText().toString();
             if(aux.equals(password)){
-                Intent intent = new Intent(PasswordInput.this, MainActivity.class);
+                Intent intent = new Intent(LogInActivity.this, ProgramsActivity.class);
                 startActivity(intent);
                 finish();
             }

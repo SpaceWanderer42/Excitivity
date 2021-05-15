@@ -8,10 +8,14 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.planner.Login.LogInActivity;
 
 public class ProgramsActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -35,13 +39,19 @@ public class ProgramsActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_programs);
         TextView welcome = findViewById(R.id.Welcome);
         SharedPreferences datasaver = getSharedPreferences("user_data", MODE_PRIVATE);
-        String username = datasaver.getString("user","");
+        String username = datasaver.getString("user", "");
         welcome.setText("Welcome back, " + username + "!");
         cooking = (CardView) findViewById(R.id.Cooking);
         cooking.setOnClickListener(this);
         //getActionBar().setDisplayHomeAsUpEnabled(true);
 
 
+    }
+
+    public void openCalendar(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 /*
     @Override

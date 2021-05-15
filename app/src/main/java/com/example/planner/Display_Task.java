@@ -9,8 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.planner.Login.LoginActivity;
-
 public class Display_Task extends AppCompatActivity {
 
     @Override

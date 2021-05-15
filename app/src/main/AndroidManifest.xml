@@ -11,12 +11,12 @@
         android:theme="@style/Theme.Planner">
         <activity android:name=".Display_Task"></activity>
         <activity android:name=".Cooking" />
-        <activity android:name=".Login.PasswordInput" />
+        <activity android:name=".Login.LogInActivity" />
         <activity
             android:name=".MainActivity"
             android:label="Excitivity"
             android:theme="@style/Theme.Planner.NoActionBar" />
-        <activity android:name=".Login.LoginActivity" />
+        <activity android:name=".Login.SignUpActivity" />
         <activity android:name=".ProgramsActivity" />
         <activity
             android:name=".SplashActivity"

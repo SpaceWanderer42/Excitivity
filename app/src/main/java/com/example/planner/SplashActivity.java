@@ -7,8 +7,8 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.planner.Login.LoginActivity; // urmeaza a fi implementata
-import com.example.planner.Login.PasswordInput;
+import com.example.planner.Login.SignUpActivity; // urmeaza a fi implementata
+import com.example.planner.Login.LogInActivity;
 
 
 public class SplashActivity extends AppCompatActivity {
@@ -26,13 +26,13 @@ public class SplashActivity extends AppCompatActivity {
             SharedPreferences pref;
             pref = getSharedPreferences("preference", MODE_PRIVATE);
             if(pref.getBoolean("firststart", true)){
-                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                Intent intent = new Intent(SplashActivity.this, SignUpActivity.class);
                 startActivity(intent);
                 finish();
 
             }
             else{
-                Intent launchlogin = new Intent(SplashActivity.this, PasswordInput.class);
+                Intent launchlogin = new Intent(SplashActivity.this, LogInActivity.class);
                 startActivity(launchlogin);
                 finish();
             }

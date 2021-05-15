@@ -11,29 +11,42 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
             android:layout_marginLeft="10sp"
+            android:layout_marginTop="10sp"
             android:layout_marginRight="10sp">
-            <LinearLayout
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:weightSum="1">
+
                 <TextView
                     android:id="@+id/Welcome"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:textSize="30sp"
-                    android:textColor="@color/black"
                     android:layout_gravity="center"
-                    android:textAlignment="center"
-                    android:paddingTop="25sp"
-                    >
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="90dp"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
 
-                </TextView>
-            </LinearLayout>
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentRight="true"
+                    android:onClick="openCalendar"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/ic_coin" />
+            </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
         <GridLayout
@@ -66,10 +79,10 @@
                         android:id="@+id/image"
                         android:layout_width="82dp"
                         android:layout_height="78dp"
-                        android:paddingBottom="10dp"
-                        android:paddingTop="0dp"
                         android:layout_centerInParent="true"
                         android:layout_gravity="center_horizontal"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="10dp"
                         android:scaleType="fitXY"
                         android:src="@drawable/ic_apple_fruit_svgrepo_com">
 
@@ -153,8 +166,6 @@
 
                 </TextView>
             </androidx.cardview.widget.CardView>
-
-
         </GridLayout>
     </LinearLayout>
 
