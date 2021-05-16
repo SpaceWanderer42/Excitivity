@@ -20,14 +20,28 @@ import com.example.planner.Login.LogInActivity;
 public class ProgramsActivity extends AppCompatActivity implements View.OnClickListener {
 
     public CardView cooking;
+    public CardView workout;
+    public CardView self_care;
+    public CardView study;
 
     @Override
     public void onClick(View v) {
         Intent intent;
         switch (v.getId()) {
             case R.id.Cooking:
-            default:
                 intent = new Intent(this, Cooking.class);
+                startActivity(intent);
+                break;
+            case R.id.Workout:
+                intent = new Intent(this, Workout.class);
+                startActivity(intent);
+                break;
+            case R.id.Self_Care:
+                intent = new Intent(this, Self_Care.class);
+                startActivity(intent);
+                break;
+            case R.id.Study:
+                intent = new Intent(this, Study.class);
                 startActivity(intent);
                 break;
         }
@@ -45,6 +59,15 @@ public class ProgramsActivity extends AppCompatActivity implements View.OnClickL
 
         cooking = (CardView) findViewById(R.id.Cooking);
         cooking.setOnClickListener(this);
+
+        workout = (CardView) findViewById(R.id.Workout);
+        workout.setOnClickListener(this);
+
+        self_care = (CardView) findViewById(R.id.Self_Care);
+        self_care.setOnClickListener(this);
+
+        study = (CardView) findViewById(R.id.Study);
+        study.setOnClickListener(this);
 
     }
 

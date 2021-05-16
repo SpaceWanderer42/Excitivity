@@ -23,7 +23,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#1dae8f"
+                android:background="#BED5ED"
                 android:orientation="vertical"
                 android:weightSum="1">
 
@@ -48,7 +48,7 @@
                     android:onClick="openCalendar"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:src="@drawable/ic_coin" />
+                    android:src="@drawable/ic_sun" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -156,7 +156,7 @@
                 app:cardCornerRadius="20sp">
 
                 <RelativeLayout
-                    android:id="@+id/relative2"
+                    android:id="@+id/relative3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -198,7 +198,7 @@
                 app:cardCornerRadius="20sp">
 
                 <RelativeLayout
-                    android:id="@+id/relative2"
+                    android:id="@+id/relative4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
