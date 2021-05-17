@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Planner">
-        <activity android:name=".Study"></activity>
+        <activity android:name=".CreateActivity"></activity>
+        <activity android:name=".Profile" />
+        <activity android:name=".Study" />
         <activity android:name=".Self_Care" />
         <activity android:name=".Workout" />
         <activity

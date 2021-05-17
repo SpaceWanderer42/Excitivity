@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
@@ -32,12 +32,23 @@
                     android:id="@+id/Welcome"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
                     android:layout_gravity="center"
                     android:paddingStart="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingEnd="90dp"
+                    android:paddingEnd="110dp"
                     android:textColor="@color/blue_writing"
                     android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/imageView12"
+                    android:paddingStart="10dp"
+                    android:textColor="#f7208f"
+                    android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -45,7 +56,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_alignParentRight="true"
-                    android:onClick="openCalendar"
+                    android:onClick="openProfile"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
                     android:src="@drawable/ic_sun" />
@@ -230,6 +241,17 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
         </GridLayout>
-    </LinearLayout>
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:backgroundTint="#29968F"
+            android:tint="#29968F"
+            app:backgroundTint="#F0ECE3"
+            app:rippleColor="#29968F"
+            app:srcCompat="@android:drawable/ic_input_add" />
+    </LinearLayout>
 </ScrollView>

@@ -52,23 +52,18 @@ public class CalendarActivity extends AppCompatActivity{
 
         button = (Button) findViewById(R.id.button_second);
         button.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-                openProgramsActivity();
-
+                openProfile();
             }
         });
     }
 
-            public void openProgramsActivity() {
-
-
-            Intent intent = new Intent(this, ProgramsActivity.class);
+    public void openProfile() {
+            Intent intent = new Intent(this, Profile.class);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         }
-
     }
 
 
