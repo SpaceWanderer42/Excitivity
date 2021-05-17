@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Planner">
         <activity android:name=".CreateActivity"></activity>
-        <activity android:name=".Profile" />
+        <activity
+            android:name=".Profile"
+            android:launchMode="singleTask" />
         <activity android:name=".Study" />
         <activity android:name=".Self_Care" />
         <activity android:name=".Workout" />
@@ -18,14 +20,17 @@
             android:name=".Display_Task"
             android:noHistory="true" />
         <activity android:name=".Cooking" />
-        <activity android:name=".CalendarActivity" />
+        <activity android:name=".CalendarActivity"
+            android:launchMode="singleTask" />
         <activity android:name=".Login.LogInActivity" />
         <activity
             android:name=".MainActivity"
             android:label="Excitivity"
             android:theme="@style/Theme.Planner.NoActionBar" />
         <activity android:name=".Login.SignUpActivity" />
-        <activity android:name=".ProgramsActivity" />
+        <activity
+            android:name=".ProgramsActivity"
+            android:launchMode="singleTask"/>
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashScreenTheme">
