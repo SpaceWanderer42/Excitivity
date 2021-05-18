@@ -36,7 +36,7 @@ public class Profile extends AppCompatActivity {
         TextView score = findViewById(R.id.Score);
         score.setText(String.valueOf(activitesNo));
         SharedPreferences dataSaver = getSharedPreferences("tasks", MODE_PRIVATE);
-        ArrayList<String> baseActivities = new ArrayList<>(Arrays.asList("cooking", "study", "workout", "self_care"));
+        ArrayList<String> baseActivities = new ArrayList<>(Arrays.asList("cooking", "study", "workout", "self_care", "user"));
         for (String baseActivity:
                 baseActivities) {
             for (int i = 1; i <= 7; i++) {

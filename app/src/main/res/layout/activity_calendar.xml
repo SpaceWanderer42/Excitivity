@@ -16,18 +16,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/button_second"
-            android:layout_width="129dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="10dp"
-            android:backgroundTint="#fbd33c"
-            android:text="Profile"
-            android:drawableLeft="@drawable/ic_left_arrow"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-        />
+    <Button
+        android:id="@+id/button_second"
+        android:layout_width="144dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="#fbd33c"
+        android:drawableLeft="@drawable/ic_left_arrow"
+        android:text="Profile"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
