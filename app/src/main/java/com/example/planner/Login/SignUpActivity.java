@@ -66,7 +66,6 @@ public class SignUpActivity extends AppCompatActivity {
                     datasaver.putString("pass", inpass);
                     datasaver.apply();
                     Intent intent = new Intent(SignUpActivity.this, ProgramsActivity.class);
-                    //intent.putExtra("User", usernameEditText.getText().toString()+"");
                     startActivity(intent);
                     finish();
                 }

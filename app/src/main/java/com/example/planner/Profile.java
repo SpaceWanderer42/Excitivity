@@ -24,6 +24,7 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         setActivitiesCompleted();
     }
+
     public void openCalendar(View view) {
         Intent intent = new Intent(this, CalendarActivity.class);
         startActivity(intent);

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.planner">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Planner">
-        <activity android:name=".CreateActivity"></activity>
+        <activity android:name=".User_Activity"></activity>
+        <activity android:name=".CreateActivity" />
         <activity
             android:name=".Profile"
             android:launchMode="singleTask" />
@@ -20,7 +23,8 @@
             android:name=".Display_Task"
             android:noHistory="true" />
         <activity android:name=".Cooking" />
-        <activity android:name=".CalendarActivity"
+        <activity
+            android:name=".CalendarActivity"
             android:launchMode="singleTask" />
         <activity android:name=".Login.LogInActivity" />
         <activity
@@ -30,7 +34,7 @@
         <activity android:name=".Login.SignUpActivity" />
         <activity
             android:name=".ProgramsActivity"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTask" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashScreenTheme">

@@ -19,6 +19,7 @@ public class Display_Task extends AppCompatActivity {
         TextView text = findViewById(R.id.Display_Task);
         Intent curr_intent = getIntent();
         String activity = curr_intent.getStringExtra("activity");
+        SharedPreferences sharedPreferences = getSharedPreferences("user_activity", MODE_PRIVATE);
         switch (activity) {
             case "cooking1":
                 text.setText("Try a new recipe");
@@ -104,47 +105,78 @@ public class Display_Task extends AppCompatActivity {
             case "study7":
                 text.setText("Use mind maps to organise information");
                 break;
+            case "user1":
+                text.setText(sharedPreferences.getString("input1", ""));
+                break;
+            case "user2":
+                text.setText(sharedPreferences.getString("input2", ""));
+                break;
+            case "user3":
+                text.setText(sharedPreferences.getString("input3", ""));
+                break;
+            case "user4":
+                text.setText(sharedPreferences.getString("input4", ""));
+                break;
+            case "user5":
+                text.setText(sharedPreferences.getString("input5", ""));
+                break;
+            case "user6":
+                text.setText(sharedPreferences.getString("input6", ""));
+                break;
+            case "user7":
+                text.setText(sharedPreferences.getString("input7", ""));
+                break;
         }
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(activity.startsWith("cooking")) {
-                    SharedPreferences data = getSharedPreferences("tasks",MODE_PRIVATE);
+                if (activity.startsWith("cooking")) {
+                    SharedPreferences data = getSharedPreferences("tasks", MODE_PRIVATE);
                     SharedPreferences.Editor datasaver = data.edit();
                     datasaver.putString(activity, String.valueOf(1));
-                    datasaver.commit();
+                    datasaver.apply();
                     Intent intent = new Intent(Display_Task.this, Cooking.class);
-                    intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);;
+                    intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     finish();
                 }
-                if(activity.startsWith("workout")) {
-                    SharedPreferences data = getSharedPreferences("tasks",MODE_PRIVATE);
+                if (activity.startsWith("workout")) {
+                    SharedPreferences data = getSharedPreferences("tasks", MODE_PRIVATE);
                     SharedPreferences.Editor datasaver = data.edit();
                     datasaver.putString(activity, String.valueOf(1));
-                    datasaver.commit();
+                    datasaver.apply();
                     Intent intent = new Intent(Display_Task.this, Workout.class);
-                    intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);;
+                    intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     finish();
                 }
-                if(activity.startsWith("self_care")) {
-                    SharedPreferences data = getSharedPreferences("tasks",MODE_PRIVATE);
+                if (activity.startsWith("self_care")) {
+                    SharedPreferences data = getSharedPreferences("tasks", MODE_PRIVATE);
                     SharedPreferences.Editor datasaver = data.edit();
                     datasaver.putString(activity, String.valueOf(1));
-                    datasaver.commit();
+                    datasaver.apply();
                     Intent intent = new Intent(Display_Task.this, Self_Care.class);
-                    intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);;
+                    intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     finish();
                 }
-                if(activity.startsWith("study")) {
-                    SharedPreferences data = getSharedPreferences("tasks",MODE_PRIVATE);
+                if (activity.startsWith("study")) {
+                    SharedPreferences data = getSharedPreferences("tasks", MODE_PRIVATE);
                     SharedPreferences.Editor datasaver = data.edit();
                     datasaver.putString(activity, String.valueOf(1));
-                    datasaver.commit();
+                    datasaver.apply();
                     Intent intent = new Intent(Display_Task.this, Study.class);
-                    intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);;
+                    intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
+                    startActivity(intent);
+                    finish();
+                }
+                if (activity.startsWith("user")) {
+                    SharedPreferences data = getSharedPreferences("tasks", MODE_PRIVATE);
+                    SharedPreferences.Editor datasaver = data.edit();
+                    datasaver.putString(activity, String.valueOf(1));
+                    datasaver.apply();
+                    Intent intent = new Intent(Display_Task.this, User_Activity.class);
+                    intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     finish();
                 }

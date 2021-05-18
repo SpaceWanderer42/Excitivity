@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -25,6 +27,7 @@ public class ProgramsActivity extends AppCompatActivity implements View.OnClickL
     protected void onResume() {
         super.onResume();
         setActivitiesCompleted();
+        initRecyclerView();
     }
 
     @Override
@@ -42,6 +45,9 @@ public class ProgramsActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.Study:
                 intent = new Intent(this, Study.class);
+                break;
+            case R.id.recyclerView:
+                intent = new Intent(this, User_Activity.class);
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + v.getId());
@@ -78,13 +84,27 @@ public class ProgramsActivity extends AppCompatActivity implements View.OnClickL
             Intent intent = new Intent(ProgramsActivity.this, CreateActivity.class);
             startActivity(intent);
         });
-
+        initRecyclerView();
     }
+
+    private void initRecyclerView() {
+        ArrayList<String> mNames = new ArrayList<>();
+        SharedPreferences sharedPreferences = getSharedPreferences("user_activity", MODE_PRIVATE);
+        if(sharedPreferences.getString("input0", "").isEmpty())
+            return;
+        mNames.add(sharedPreferences.getString("input0", ""));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(layoutManager);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mNames);
+        recyclerView.setAdapter(adapter);
+    }
+
 
     public void openProfile(View view) {
         Intent intent = new Intent(this, Profile.class);
         startActivity(intent);
-//        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     public void setActivitiesCompleted() {
@@ -93,8 +113,8 @@ public class ProgramsActivity extends AppCompatActivity implements View.OnClickL
         score.setText(String.valueOf(activitesNo));
         SharedPreferences dataSaver = getSharedPreferences("tasks", MODE_PRIVATE);
         ArrayList<String> baseActivities = new ArrayList<>(Arrays.asList("cooking", "study", "workout", "self_care"));
-        for (String baseActivity:
-             baseActivities) {
+        for (String baseActivity :
+                baseActivities) {
             for (int i = 1; i <= 7; i++) {
                 String activityCode = baseActivity + i;
                 if (dataSaver.getString(activityCode, "").equals("1"))
